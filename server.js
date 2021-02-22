@@ -6,6 +6,7 @@ const express = require("express");
 const morgan = require("morgan");
 const ApiRouter = require("./controllers/api");
 const PagesRouter = require("./controllers/pages");
+const { log } = require("mercedlogger");
 
 ////////////////////////////////
 // Global Variables
@@ -28,4 +29,4 @@ app.use("*", (req, res) => res.redirect("/")); //catch-all route for react route
 /////////////////////////////////
 // Listener
 /////////////////////////////////
-app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
+app.listen(PORT, () => log.green("Server Start", `Listening to port ${PORT}`));
