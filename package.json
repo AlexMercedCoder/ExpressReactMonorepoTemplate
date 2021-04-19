@@ -6,7 +6,10 @@
   "scripts": {
     "prod": "npm run build --prefix react && node server.js",
     "dev:react": "npm start --prefix react",
-    "dev:express": "nodemon server.js"
+    "dev:express": "nodemon server.js",
+    "setup": "npm install && npm install --prefix react",
+    "build": "npm install --prefix react && npm build --prefix",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
